@@ -318,5 +318,17 @@
   "unexpected_error": {
     "en": "Unexpected error",
     "es": "Error inesperado"
+  },
+  "users_list": {
+    "en": "Users list",
+    "es": "Listado de usuarios"
+  },
+  "show": {
+    "en": "Show",
+    "es": "Ver"
+  },
+  "user_detail": {
+    "en": "User detail",
+    "es": "Detalle de usuario"
   }
 }

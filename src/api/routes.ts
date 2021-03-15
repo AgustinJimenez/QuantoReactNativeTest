@@ -10,3 +10,7 @@ export const sectorsRoute: string = 'data/sectors'
 export const speciesRoute: string = 'data/species'
 export const productsRoute: string = 'data/products'
 export const requestBudgetRoute: string = 'data/request-quotation'
+
+//quanto test
+export const usersRoute: string = 'users'
+export const userDetailsRoute = (id: number) => `users/${id}`

@@ -21,6 +21,8 @@ import {
   REGISTER_SAGA,
   HOME_SAGA,
   REQUEST_BUDGET_SAGA,
+  USERS_SCREEN_SAGA,
+  USERS_DETAILS_SCREEN_SAGA,
 } from './constants'
 
 export const actionAuthSaga = (params: any, onFinishCallback: Function) => ({
@@ -28,11 +30,7 @@ export const actionAuthSaga = (params: any, onFinishCallback: Function) => ({
   onFinishCallback,
   ...params,
 })
-export const fetchClientsAction = ({
-  onFinishCallback,
-  clientsIds,
-  searchName,
-}: any) => ({
+export const fetchClientsAction = ({ onFinishCallback, clientsIds, searchName }: any) => ({
   type: FETCH_CLIENTS_SAGAS,
   onFinishCallback,
   clientsIds,
@@ -42,11 +40,7 @@ export const setClientsReducerAction = (data: any) => ({
   type: FETCH_CLIENTS_REDUCER,
   data,
 })
-export const fetchReasonsAction = ({
-  onFinishCallback,
-  searchName,
-  ids,
-}: any) => ({
+export const fetchReasonsAction = ({ onFinishCallback, searchName, ids }: any) => ({
   type: FETCH_REASONS_SAGAS,
   onFinishCallback,
   searchName,
@@ -85,29 +79,18 @@ export const setLangSaga = (lang_id: string) => ({
   type: CHANGE_LANGUAGE_SAGAS,
   lang_id,
 })
-export const pushNewItemToDatasetListAction = (
-  data: any,
-  dataset_name: string
-) => ({
+export const pushNewItemToDatasetListAction = (data: any, dataset_name: string) => ({
   type: PUSH_TO_DATASET_LIST_REDUCER,
   dataset_name,
   data,
 })
-export const updateItemToDatasetList = (
-  data: any,
-  dataset_name: string,
-  afterFinishCallback?: Function
-) => ({
+export const updateItemToDatasetList = (data: any, dataset_name: string, afterFinishCallback?: Function) => ({
   type: UPDATE_TO_DATASET_LIST_REDUCER,
   dataset_name,
   data,
   afterFinishCallback,
 })
-export const deleteItemFromDatasetList = (
-  data: any,
-  dataset_name: string,
-  afterFinishCallback: Function
-) => ({
+export const deleteItemFromDatasetList = (data: any, dataset_name: string, afterFinishCallback: Function) => ({
   type: DELETE_DATASET_LIST_REDUCER,
   dataset_name,
   data,
@@ -117,18 +100,12 @@ export const runTasksSaga = ({ afterFinishCallback }: any) => ({
   type: RUN_TASKS_SAGA,
   afterFinishCallback,
 })
-export const setNotificationSagaAction = (
-  data: any,
-  afterFinishCallback?: Function
-) => ({
+export const setNotificationSagaAction = (data: any, afterFinishCallback?: Function) => ({
   type: SET_NOTIFICTION_SAGA,
   data,
   afterFinishCallback,
 })
-export const notificationWasTappedAction = (
-  data: any,
-  afterFinishCallback?: Function
-) => ({
+export const notificationWasTappedAction = (data: any, afterFinishCallback?: Function) => ({
   type: NOTIFICATION_WAS_TAPPED_SAGA,
   data,
   afterFinishCallback,
@@ -145,12 +122,7 @@ export const logAction = (email: string, password: string) => ({
   email,
   password,
 })
-export const registerSagaAction = (
-  name: string,
-  email: string,
-  password: string,
-  password_confirmation: string
-) => ({
+export const registerSagaAction = (name: string, email: string, password: string, password_confirmation: string) => ({
   type: REGISTER_SAGA,
   name,
   email,
@@ -162,4 +134,11 @@ export const homeSagaAction = () => ({
 })
 export const requestBudgetSagaAction = () => ({
   type: REQUEST_BUDGET_SAGA,
+})
+export const usersScreenSagaAction = () => ({
+  type: USERS_SCREEN_SAGA,
+})
+export const usersDetailsScreenSagaAction = ({ id }: any = {}) => ({
+  type: USERS_DETAILS_SCREEN_SAGA,
+  id,
 })

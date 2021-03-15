@@ -8,6 +8,8 @@ import callbackVoidSaga from './callbackVoidSaga'
 import registerSaga from './registerSaga'
 import homeSaga from './homeSaga'
 import requestBudgetSaga from './requestBudgetSaga'
+import usersScreenSaga from './usersScreenSaga'
+import usersDetailsScreenSaga from './usersDetailsScreenSaga'
 
 export default function* rootSaga() {
   yield all([
@@ -20,5 +22,7 @@ export default function* rootSaga() {
     registerSaga(),
     homeSaga(),
     requestBudgetSaga(),
+    usersScreenSaga(),
+    usersDetailsScreenSaga(),
   ])
 }

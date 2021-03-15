@@ -12,5 +12,8 @@
   "products": {},
   "product_lines": {},
   "request_budget_products": [],
-  "sending_budget_request": false
+  "sending_budget_request": false,
+  "users": {},
+  "users_details_screen_is_loading": false,
+  "users_screen_is_loading": false
 }

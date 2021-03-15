@@ -1,13 +1,10 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { View, Text } from 'react-native'
 import { useTranslation } from 'react-i18next'
 import { useNavigation } from '@react-navigation/native'
+import styles from './styles'
 
-const styles = StyleSheet.create({
-  container: {},
-})
-
-const ExampleScreen = ({}) => {
+const UserDetailsScreen = ({}) => {
   const { t } = useTranslation()
   const navigation = useNavigation()
   return (
@@ -17,4 +14,4 @@ const ExampleScreen = ({}) => {
   )
 }
 
-export default ExampleScreen
+export default UserDetailsScreen
