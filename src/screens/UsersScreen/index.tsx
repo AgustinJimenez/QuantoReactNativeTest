@@ -28,7 +28,6 @@ const UsersScreen = ({}) => {
 
     return unsubscribe
   }, [])
-
   return (
     <View style={styles.container}>
       <FlatList

@@ -12,17 +12,7 @@ export const persistSelector = ({ _persist: any = null }) => {
     }
   )
 }
-export const datasetSelector = (
-  state: any,
-  datasetName: string,
-  {
-    list_format = false,
-    single_format = false,
-    ids = [],
-    id = 0,
-    debug = false,
-  } = {}
-) => {
+export const datasetSelector = (state: any, datasetName: string, { list_format = false, single_format = false, ids = [], id = 0, debug = false } = {}) => {
   if (!!debug)
     console.log('datasetSelector start ===> ', {
       datasetName,
@@ -46,15 +36,12 @@ export const datasetSelector = (
   }
   //console.log('datasetSelector mid ===> ', { selected_dataset })
   if (list_format) {
-    selected_dataset = Object.keys(selected_dataset || []).map(
-      (id) => selected_dataset[id]
-    )
+    selected_dataset = Object.keys(selected_dataset || []).map(id => selected_dataset[id])
     selected_dataset = collect(selected_dataset)
     return selected_dataset
   }
 
-  if (Array.isArray(selected_dataset))
-    selected_dataset = collect(selected_dataset)
+  if (Array.isArray(selected_dataset)) selected_dataset = collect(selected_dataset)
 
   return selected_dataset
 }
