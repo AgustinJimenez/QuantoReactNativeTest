@@ -1,19 +1,5 @@
 {
   "lang": "es",
-  "login_email": "",
-  "auth_token": "",
-  "profile": {},
-  "selected_product_id": null,
-  "product_selection_panel_open": false,
-  "product_count_modal_is_visible": false,
-  "categories": {},
-  "sectors": {},
-  "species": {},
-  "products": {},
-  "product_lines": {},
-  "request_budget_products": [],
-  "sending_budget_request": false,
-  "users": {},
   "users_details_screen_is_loading": false,
   "users_screen_is_loading": false
 }

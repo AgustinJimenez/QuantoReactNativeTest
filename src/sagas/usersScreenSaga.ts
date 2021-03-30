@@ -11,7 +11,7 @@ export function* saga({ page, per_page }: any = {}) {
   var { error, data } = yield call(request, {
     url: usersRoute,
     show_message: true,
-    data: {
+    params: {
       page,
       per_page,
     },

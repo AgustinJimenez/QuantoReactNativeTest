@@ -35,6 +35,7 @@ const UsersScreen = ({}) => {
         onRefresh={refreshUsers}
         data={users.all()}
         ListEmptyComponent={EmptyLabel}
+        keyExtractor={item => `${item.id}`}
         renderItem={({ item, index, separators }: any) => <UserListItem key={index} user_id={item['id']} isLast={index === users.count() - 1} />}
       />
     </View>

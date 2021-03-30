@@ -5,8 +5,6 @@ import showToast from '../../utils/showToast'
 import i18n from 'i18next'
 import { put, select } from 'redux-saga/effects'
 import { datasetSelector } from '../../redux/selectors'
-import { logoutSagaAction } from '../actions'
-
 export interface Response {
   data: any
   error: boolean
@@ -41,7 +39,7 @@ function* request(
     )
     if (!options.headers) options.headers = {}
     if (!!auth_token) options.headers['Authorization'] = `Bearer ${auth_token}`
-    let response = yield axiosInstance.request(options)
+    let response: any = yield axiosInstance.request(options)
 
     if (options.debug)
       console.log(`<=== === RESPONSE === ===> [${options.url}]`, {
@@ -91,7 +89,7 @@ function* request(
   }
 
   if (!!options['checkAuth'] && result['response']['status'] === UNAUTHORIZED) {
-    yield put(logoutSagaAction())
+    //yield put(logoutSagaAction())
   }
 
   if (options.debug)
